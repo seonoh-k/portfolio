@@ -1,0 +1,67 @@
+{
+    "main": {
+        "lines": [
+            "プログラミング == プラモデル",
+            "自分の手で組み立てるような達成感,",
+            "だからプログラミングが好き。",
+            "過程を楽しむプログラマー",
+            "キム・ソノです。"
+        ]
+    },
+    "about": {
+        "lines": [
+            "チームリーダーの経験を活かし",
+            "企画から開発・リリースまで一貫して対応。", 
+            "問題解決力とチームワークに自信があります。"
+        ]
+    },
+    "projects": [
+        { 
+            "title": "Charti", 
+            "desc": "子供のヘルスケアサービス", 
+            "duration": "2022年05月 ~ 2025年07月",
+            "logo": "/Charti_logo.png",
+            "position": "役割 - プロジェクトリーダー, フルスタック/インフラ設計、本番リリース担当",
+            "info": "問診（アンケート）入力後、リスク検知時に専門家相談へ連携。AWS EC2とCloudflare R2を活用したインフラ設計。",
+            "gifs": [
+                "/img/main.jpg",
+                "/img/daily_matching.gif",
+                "/img/expert_matching.gif",
+                "/img/manager_group.gif",
+                "/img/admin_notice.gif",
+                "/img/album.gif"
+            ],
+            "skills": [
+                "HTML", "CSS", "JS",
+                "Java", "SpringBoot",
+                "AWS EC2", "Cloudflare R2"
+            ],
+            "links": [
+                { "type": "Github", "url": "https://github.com/seonoh-k/charti" },
+                { "type": "Demo", "url": "https://drive.google.com/file/d/1KkzQPJ_pNmAEvl-_aT9UDC563Uaki1mN/view" },
+                { "type": "ReadMore", "url": "https://www.notion.so/Charti-230f7b0856be809cb4eace6034bacc6b?source=copy_link" }
+            ]
+        },
+        { 
+            "title": "BirdClown", 
+            "desc": "企業紹介・プロモーションサイト", 
+            "duration": "2025年07月 ~ 進行中",
+            "logo": "/BirdClown_logo.png",
+            "position": "役割 - 調整中",
+            "info": "クライアントの要望に応じて、会社・サービス紹介と過去イベント写真ギャラリーの2点に特化。",
+            "gifs": [
+                "/BirdClown_logo.png"
+            ],
+            "skills": [
+                "HTML", "CSS", "JS", "React",
+                "Java", "SpringBoot",
+                "AWS Lightsail", "Cloudflare R2"
+            ],
+            "links": [
+                { "type": "Github", "url": "https://github.com/seonoh-k/BirdClown" },
+                { "type": "Demo", "url": "" },
+                { "type": "ReadMore", "url": "https://www.notion.so/BirdClown-230f7b0856be80758f22e501fc583986?source=copy_link" }
+            ]
+        }   
+    ]
+}
