@@ -57,7 +57,7 @@ export default function Projects() {
             transition={{ duration: 0.8 }}
             className="md:w-[970px]"
         >
-            <div className="flex flex-col px-4 py-8 md:p-8 text-white bg-gray-500 rounded-xl shadow justify-center items-center shadow-lg">
+            <div className="flex flex-col px-4 py-8 md:p-8 md:my-8 text-white bg-gray-500 rounded-xl shadow justify-center items-center shadow-lg">
                 <h1 className="text-3xl md:text-5xl opacity-70 md:text-left md:mb-10">Projects</h1>
                 <div className="md:hidden flex justify-center items-center gap-1 py-2">
                     <button onClick={() => setIdx(idx === 0 ? t('projects', {returnObjects: true}).length - 1 : idx - 1)}
