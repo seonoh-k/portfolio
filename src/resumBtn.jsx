@@ -5,9 +5,9 @@ export default function ResumBtn() {
     const { i18n } = useTranslation();
 
     const getResumeFile = () => {
-        if(i18n === "ko") {
+        if(i18n.language === "ko") {
             return "/KimSeonOh_resume_ko.pdf";
-        }else if(i18n === "jp") {
+        }else if(i18n.language === "jp") {
             return "/KimSeonOh_resume_jp.pdf";
         }else {
             return "/KimSeonOh_resume_ko.pdf";
@@ -15,9 +15,9 @@ export default function ResumBtn() {
     }
 
     const getResumFilename = () => {
-        if(i18n === "ko") {
+        if(i18n.language === "ko") {
             return "김선오_이력서.pdf";
-        }else if(i18n === "jp") {
+        }else if(i18n.language === "jp") {
             return "KimSeonOh_履歴書.pdf";
         }else {
             return "김선오_이력서.pdf";
