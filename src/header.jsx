@@ -2,7 +2,7 @@ import { React, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Hamburger from './hamburger.jsx';
 import Sidebar from './sidebar.jsx';
-import ResumeBtn from './resumBtn.jsx';
+import ResumeBtn from './resumeBtn.jsx';
 import { useTranslation } from "react-i18next";
 
 export default function Header() {
@@ -16,6 +16,7 @@ export default function Header() {
                 <Link to='' className='font-bitcount text-xl md:text-3xl'>KimSeonOh</Link>
                 <nav className='hidden md:flex md:text-xl md:font-semibold md:items-center md:space-x-4'>
                     <div className="flex text-sm gap-2">
+                        <button onClick={() => i18n.changeLanguage('en')}>EN</button>|
                         <button onClick={() => i18n.changeLanguage('ko')}>KO</button>|
                         <button onClick={() => i18n.changeLanguage('jp')}>JP</button>
                     </div>

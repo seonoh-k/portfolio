@@ -1,0 +1,67 @@
+{
+    "main": {
+        "lines": [
+            "Programming == Plastic Models",
+            "The sense of accomplishment in assembling piece by piece,",
+            "That’s why I love programming.",
+            "A full-stack developer who enjoys coding,",
+            "Kim Seonoh."
+        ]
+    },
+    "about": {
+        "lines": [
+            "Drawing on my experience as a team leader,",
+            "From planning to development and deployment,",
+            "A developer skilled in problem-solving and collaboration."
+        ]
+    },
+    "projects": [
+        { 
+            "title": "Charti", 
+            "desc": "Healthcare service for children", 
+            "duration": "2022-05 ~ 2025-07",
+            "logo": "/Charti_logo.png",
+            "position": "Role – Project Leader, Full-Stack/Deployment/Infrastructure Lead",
+            "info": "After questionnaire submission, links to expert consultation upon risk detection. Infrastructure designed with AWS EC2 + Cloudflare R2.",
+            "gifs": [
+                "/img/main.jpg",
+                "/img/daily_matching.gif",
+                "/img/expert_matching.gif",
+                "/img/manager_group.gif",
+                "/img/admin_notice.gif",
+                "/img/album.gif"
+            ],
+            "skills": [
+                "HTML", "CSS", "JS",
+                "Java", "SpringBoot",
+                "AWS EC2", "Cloudflare R2"
+            ],
+            "links": [
+                { "type": "Github", "url": "https://github.com/seonoh-k/charti" },
+                { "type": "Demo", "url": "https://drive.google.com/file/d/1KkzQPJ_pNmAEvl-_aT9UDC563Uaki1mN/view" },
+                { "type": "ReadMore", "url": "https://www.notion.so/Charti-230f7b0856be809cb4eace6034bacc6b?source=copy_link" }
+            ]
+        },
+        { 
+            "title": "BirdClown", 
+            "desc": "Corporate introduction and promotional website", 
+            "duration": "2025-07 ~ Ongoing",
+            "logo": "/BirdClown_logo.png",
+            "position": "Role – Ongoing",
+            "info": "Focused on two main requests from the client: company/service introduction and event photo gallery.",
+            "gifs": [
+                "/BirdClown_logo.png"
+            ],
+            "skills": [
+                "HTML", "CSS", "JS", "React",
+                "Java", "SpringBoot",
+                "AWS Lightsail", "Cloudflare R2"
+            ],
+            "links": [
+                { "type": "Github", "url": "https://github.com/seonoh-k/BirdClown" },
+                { "type": "Demo", "url": "" },
+                { "type": "ReadMore", "url": "https://www.notion.so/BirdClown-230f7b0856be80758f22e501fc583986?source=copy_link" }
+            ]
+        }   
+    ]
+}

@@ -15,7 +15,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-white opacity-70"
         >
-            <div className="flex flex-col items-center space-y-2 md:space-y-6 mb-10 md:mb-20">
+            <div className="flex flex-wrap text-center justify-center items-center space-y-2 md:space-y-6 mb-10 md:mb-20">
                 {t('main.lines', {returnObjects: true}).map((txt, idx) => (
                     <motion.h1 
                         key={txt}
@@ -60,6 +60,12 @@ export default function Home() {
             >
                 <p className="text-lg md:text-2xl mb-4">Language</p>
                 <div className="flex gap-4">
+                    <button 
+                        className="text-sm md:text-xl hover:opacity-90"
+                        onClick={() => i18n.changeLanguage('en')}
+                    >
+                        English
+                    </button>
                     <button 
                         className="text-sm md:text-xl hover:opacity-90"
                         onClick={() => i18n.changeLanguage('ko')}
