@@ -4,15 +4,14 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { useSwipeable } from 'react-swipeable';
 import { useTranslation } from "react-i18next";
 
-function Gifs({ idx }) {
-    const { t } = useTranslation();
+function Gifs({ project }) {
     const [ gifIdx, setGifIdx ] = useState(0);
 
     const swipeHandler = useSwipeable({
         onSwipedLeft: () => 
-            setGifIdx( gifIdx === t('projects', {returnObjects: true})[idx].gifs.length - 1 ? 0 : gifIdx + 1),
+            setGifIdx( gifIdx === project.gifs.length - 1 ? 0 : gifIdx + 1),
         onSwipedRight: () =>
-            setGifIdx( gifIdx === 0 ? t('projects', {returnObjects: true})[idx].gifs.length - 1 : gifIdx - 1),
+            setGifIdx( gifIdx === 0 ? project.gifs.length - 1 : gifIdx - 1),
         preventDefaultTouchmoveEvent: true,
         trackMouse: true
     })
@@ -24,13 +23,13 @@ function Gifs({ idx }) {
             style={{ touchAction: "pan-y" }}
         >
             <img 
-                src={t('projects', {returnObjects: true})[idx].gifs[gifIdx]}
+                src={project.gifs[gifIdx]}
                 className="w-full h-full object-contain rounded-lg"
                 alt="demo"
                 draggable="false"
             />
             <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
-                {t('projects', {returnObjects: true})[idx].gifs.map((_, i) => (
+                {project.gifs.map((_, i) => (
                     <span 
                         key={i}
                         onClick={() => setGifIdx(i)}
@@ -47,6 +46,9 @@ function Gifs({ idx }) {
 export default function Projects() {
     const { t } = useTranslation();
     const [ idx, setIdx ] = useState(0);
+
+    const projects = t('projects', {returnObjects: true});
+    const project = projects[idx];
     
     return (
         <>
@@ -55,35 +57,37 @@ export default function Projects() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -40 }}
             transition={{ duration: 0.8 }}
-            className="md:w-[970px]"
+            className="md:w-[1200px] my-10"
         >
-            <div className="flex flex-col px-4 py-8 md:p-8 md:my-8 text-white bg-gray-500 rounded-xl shadow justify-center items-center shadow-lg">
-                <h1 className="text-3xl md:text-5xl opacity-70 md:text-left md:mb-10">Projects</h1>
+            <div className="flex flex-col px-4 py-8 md:p-8 text-white bg-gray-500 rounded-xl shadow justify-center items-center shadow-lg">
+                <h1 className="text-3xl md:text-5xl opacity-70 md:text-left md:mb-12">Projects</h1>
                 <div className="md:hidden flex justify-center items-center gap-1 py-2">
-                    <button onClick={() => setIdx(idx === 0 ? t('projects', {returnObjects: true}).length - 1 : idx - 1)}
+                    <button onClick={() => setIdx(idx === 0 ? projects.length - 1 : idx - 1)}
                         className="p-1">
                         <FaAngleLeft />
                     </button>
                     <div className="flex flex-col">
                         <AnimatePresence mode="wait" initial="false">
                             <motion.div
-                                key={t('projects', {returnObjects: true})[idx].title}
+                                key={project.title}
                                 initial={{ opacity: 0, x: 100 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -100 }}
                                 className="w-[256px] h-full flex flex-col space-y-2"
                             >
                                 <div className="flex gap-1">
-                                    <h2 className="text-2xl font-semibold pt-2">{t('projects', {returnObjects: true})[idx].title}</h2>
-                                    <img src={t('projects', {returnObjects: true})[idx].logo} className="w-[80px] pb-2 object-cover"/>
+                                    <h2 className="text-2xl font-semibold pt-2">{project.title}</h2>
+                                    <img src={project.logo} 
+                                        className={`w-[80px] pb-2 object-cover 
+                                        ${!project.logo || project.logo === '/' ? 'hidden' : ''}`}/>
                                 </div>
-                                <p className="text-lg">{t('projects', {returnObjects: true})[idx].desc}</p>
-                                <span className="text-sm">{t('projects', {returnObjects: true})[idx].duration}</span>
-                                <p className="text-sm">{t('projects', {returnObjects: true})[idx].position}</p>
-                                <span className="flex flex-wrap text-sm">{t('projects', {returnObjects: true})[idx].info}</span>
-                                <Gifs idx={idx} />
+                                <p className="text-lg">{project.desc}</p>
+                                <span className="text-sm">{project.duration}</span>
+                                <p className="text-sm">{project.position}</p>
+                                <span className="flex flex-wrap text-sm">{project.info}</span>
+                                <Gifs project={project} />
                                 <div className="flex flex-wrap justify-center my-4 gap-2">
-                                    {t('projects', {returnObjects: true})[idx].skills.map((s) => (
+                                    {project.skills.map((s) => (
                                         <span 
                                             key={s}
                                             className="px-2 py-1 bg-white/20 rounded-md text-xs font-semibold"
@@ -93,7 +97,7 @@ export default function Projects() {
                                     ))}
                                 </div>
                                 <div className="flex justify-center pt-4 gap-2">
-                                    {t('projects', {returnObjects: true})[idx].links.map((l) => (
+                                    {project.links.map((l) => (
                                         <a 
                                             key={l.url}
                                             href={l.url}
@@ -107,7 +111,7 @@ export default function Projects() {
                             </motion.div>
                         </AnimatePresence>
                     </div>
-                    <button onClick={() => setIdx(idx === t('projects', {returnObjects: true}).length - 1 ? 0 : idx + 1)}
+                    <button onClick={() => setIdx(idx === projects.length - 1 ? 0 : idx + 1)}
                         className="p-1">
                         <FaAngleRight />
                     </button>
@@ -116,17 +120,19 @@ export default function Projects() {
                 <div className="hidden md:block">
                     <AnimatePresence mode="wait" initial="false">
                         <div className="grid grid-cols-2 gap-10">
-                            {t('projects', {returnObjects: true}).map((p, i) => (
-                                <div key={p.title} className="p-4 w-[420px] h-full flex flex-col space-y-2 border-2 border-white/20 rounded-xl">
+                            {projects.map((p) => (
+                                <div key={p.title} className="p-4 w-[540px] h-full flex flex-col space-y-2 border-2 border-white/20 rounded-xl">
                                     <div className="flex gap-1">
                                         <h2 className="text-4xl font-semibold pt-2">{p.title}</h2>
-                                        <img src={p.logo} className="w-[120px] ml-2 object-cover"/>
+                                        <img src={p.logo} 
+                                            className={`w-[120px] ml-2 object-cover
+                                            ${!p.logo || p.logo === '/' ? 'hidden' : ''}`}/>
                                     </div>
                                     <p className="text-2xl">{p.desc}</p>
                                     <span className="text-xl">{p.duration}</span>
                                     <p className="text-xl">{p.position}</p>
                                     <span className="flex flex-wrap text-xl">{p.info}</span>
-                                    <Gifs idx={i} />
+                                    <Gifs project={p} />
                                     <div className="flex flex-wrap justify-center my-4 gap-2">
                                         {p.skills.map((s) => (
                                             <span 

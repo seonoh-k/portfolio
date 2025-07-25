@@ -47,9 +47,26 @@
             ]
         },
         { 
+            "title": "Portfolio Site", 
+            "desc": "개인 포트폴리오 웹사이트 제작", 
+            "duration": "2025-07",
+            "logo": "/",
+            "position": "개인 프로젝트",
+            "info": "React 기반 반응형 포트폴리오 웹사이트 제작",
+            "gifs": [
+                "/Portfolio_main.png"
+            ],
+            "skills": [
+                "React", "Vite", "TailwindCSS", "i18next", "Vercel"
+            ],
+            "links": [
+                { "type": "Github", "url": "https://github.com/seonoh-k/portfolio.git" },
+                { "type": "ReadMore", "url": "https://www.notion.so/BirdClown-230f7b0856be80758f22e501fc583986?source=copy_link" }
+            ]
+        },{
             "title": "BirdClown", 
             "desc": "회사 소개 및 홍보 사이트", 
-            "duration": "2025-07 ~ 진행중",
+            "duration": "준비중",
             "logo": "/BirdClown_logo.png",
             "position": "역할 - 조정중",
             "info": "클라이언트의 요청에 따라 다음 두 가지에 집중, 회사/서비스 소개 + 진행했던 이벤트 사진 갤러리",

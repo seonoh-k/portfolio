@@ -12,7 +12,7 @@ export default function Header() {
     return (
         <>
         <header className='flex justify-center items-center bg-gray-200'>
-            <div className='flex w-full md:w-[970px] p-8 md:px-0 text-sm md:text-xl font-semibold text-gray-700 justify-between items-center bg-gray-200'>
+            <div className='flex w-full md:w-[1200px] p-8 md:px-0 text-sm md:text-xl font-semibold text-gray-700 justify-between items-center bg-gray-200'>
                 <Link to='' className='font-bitcount text-xl md:text-3xl'>KimSeonOh</Link>
                 <nav className='hidden md:flex md:text-xl md:font-semibold md:items-center md:space-x-4'>
                     <div className="flex text-sm gap-2">

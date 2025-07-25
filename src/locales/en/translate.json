@@ -48,9 +48,26 @@
             ]
         },
         { 
+            "title": "Portfolio Site", 
+            "desc": "Created a personal portfolio web site", 
+            "duration": "2025-07",
+            "logo": "/",
+            "position": "Solo Project",
+            "info": "Developed a responsive portfolio website based on React",
+            "gifs": [
+                "/Portfolio_main.png"
+            ],
+            "skills": [
+                "React", "Vite", "TailwindCSS", "i18next", "Vercel"
+            ],
+            "links": [
+                { "type": "Github", "url": "https://github.com/seonoh-k/portfolio.git" },
+                { "type": "ReadMore", "url": "https://www.notion.so/BirdClown-230f7b0856be80758f22e501fc583986?source=copy_link" }
+            ]
+        },{
             "title": "BirdClown", 
             "desc": "Corporate introduction and promotional website", 
-            "duration": "2025-07 ~ Ongoing",
+            "duration": "Under construction",
             "logo": "/BirdClown_logo.png",
             "position": "Role – Ongoing",
             "info": "Focused on two main requests from the client: company/service introduction and event photo gallery.",

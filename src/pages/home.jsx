@@ -6,6 +6,8 @@ import { useTranslation } from "react-i18next";
 
 export default function Home() {
     const { t, i18n } = useTranslation();
+    const lines = t('main.lines', {returnObjects: true});
+    
     return (
         <>
         <motion.div
@@ -16,7 +18,7 @@ export default function Home() {
             className="text-white opacity-70"
         >
             <div className="flex flex-col flex-wrap text-center justify-center items-center space-y-2 md:space-y-6 mb-10 md:mb-20">
-                {t('main.lines', {returnObjects: true}).map((txt, idx) => (
+                {lines.map((txt, idx) => (
                     <motion.h1 
                         key={txt}
                         initial={{ opacity: 0, y: 40 }}
@@ -37,7 +39,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
                     duration: 1,
-                    delay: 0.85 * t('main.lines', {returnObjects: true}).length,
+                    delay: 0.85 * lines.length,
                     ease: "easeOut"
                 }}
                 className="flex justify-center mb-10 md:mb-20"
@@ -53,7 +55,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
                     duration: 1,
-                    delay: 0.85 * (t('main.lines', {returnObjects: true}).length + 1),
+                    delay: 0.85 * (lines.length + 1),
                     ease: "easeOut"
                 }}
                 className="flex flex-col items-center"

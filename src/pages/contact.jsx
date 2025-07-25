@@ -11,7 +11,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -40 }}
             transition={{ duration: 0.8 }}
-            className="md:w-[970px]"
+            className="md:w-[1200px]"
         >
             <div className="grid grid-cols-1 md:grid-cols-2 px-16 py-8 md:p-16 bg-gray-500 rounded-xl shadow justify-center items-center shadow-lg">
                 <div className="flex flex-col items-center md:items-start mb-10 md:mb-0">

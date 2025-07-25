@@ -47,9 +47,26 @@
             ]
         },
         { 
+            "title": "Portfolio Site", 
+            "desc": "個人ポートフォリオWebサイト制作", 
+            "duration": "2025-07",
+            "logo": "/",
+            "position": "単独プロジェクト",
+            "info": "ReactベースのレスポンシブなポートフォリオWebサイト制作",
+            "gifs": [
+                "/Portfolio_main.png"
+            ],
+            "skills": [
+                "React", "Vite", "TailwindCSS", "i18next", "Vercel"
+            ],
+            "links": [
+                { "type": "Github", "url": "https://github.com/seonoh-k/portfolio.git" },
+                { "type": "ReadMore", "url": "https://www.notion.so/BirdClown-230f7b0856be80758f22e501fc583986?source=copy_link" }
+            ]
+        },{
             "title": "BirdClown", 
             "desc": "企業紹介・プロモーションサイト", 
-            "duration": "2025年07月 ~ 進行中",
+            "duration": "準備中",
             "logo": "/BirdClown_logo.png",
             "position": "役割 - 調整中",
             "info": "クライアントの要望に応じて、会社・サービス紹介と過去イベント写真ギャラリーの2点に特化。",
