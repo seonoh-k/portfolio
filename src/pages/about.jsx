@@ -71,7 +71,7 @@ export default function About() {
                         <div className="flex items-center gap-1">
                             <span className="font-semibold md:text-xl">Language</span>
                             <div className="flex items-center gap-1 md:text-xl">
-                                Japanese - JPT 895, conversational
+                                Japanese - JPT score: 895, conversational
                             </div>
                         </div>
                     </div>
