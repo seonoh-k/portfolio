@@ -120,7 +120,7 @@ export default function Projects() {
                                 <div className="flex gap-1">
                                     <h2 className="text-2xl font-semibold pt-2">{project.title}</h2>
                                     <img src={project.logo} 
-                                        className={`w-[80px] pb-2 object-cover 
+                                        className={`w-[80px] pb-2 object-contain 
                                         ${!project.logo || project.logo === '/' ? 'hidden' : ''}`}/>
                                 </div>
                                 <p className="text-lg">{project.desc}</p>
