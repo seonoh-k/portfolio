@@ -29,12 +29,12 @@
             "position": "Role – Project Leader, Full-Stack/Deployment/Infrastructure Lead",
             "info": "After questionnaire submission, links to expert consultation upon risk detection. Infrastructure designed with AWS EC2 + Cloudflare R2.",
             "gifs": [
-                "/img/main.jpg",
-                "/img/daily_matching.gif",
-                "/img/expert_matching.gif",
-                "/img/manager_group.gif",
-                "/img/admin_notice.gif",
-                "/img/album.gif"
+                "/img/charti/main.jpg",
+                "/img/charti/daily_matching.gif",
+                "/img/charti/expert_matching.gif",
+                "/img/charti/manager_group.gif",
+                "/img/charti/admin_notice.gif",
+                "/img/charti/album.gif"
             ],
             "skills": [
                 "HTML", "CSS", "JS",
@@ -50,7 +50,7 @@
         { 
             "title": "Portfolio Site", 
             "desc": "Created a personal portfolio web site", 
-            "duration": "2025-07",
+            "duration": "2025-07 (5 Days)",
             "logo": "/",
             "position": "Solo Project",
             "info": "Developed a responsive portfolio website based on React",
@@ -67,12 +67,17 @@
         },{
             "title": "BirdClown", 
             "desc": "Corporate introduction and promotional website", 
-            "duration": "Under construction",
+            "duration": "2025-08 (10 Days)",
             "logo": "/BirdClown_logo.png",
-            "position": "Role – Ongoing",
+            "position": "Role – Front, Deployment",
             "info": "Focused on two main requests from the client: company/service introduction and event photo gallery.",
             "gifs": [
-                "/BirdClown_logo.png"
+                "/img/birdclown/main.png",
+                "/img/birdclown/about_card.png",
+                "/img/birdclown/services.png",
+                "/img/birdclown/admin_gallery.png",
+                "/img/birdclown/album_update.png",
+                "/img/birdclown/admin_detail.png"
             ],
             "skills": [
                 "HTML", "CSS", "JS", "React",
@@ -81,7 +86,7 @@
             ],
             "links": [
                 { "type": "Github", "url": "https://github.com/seonoh-k/BirdClown" },
-                { "type": "Demo", "url": "" },
+                { "type": "Website", "url": "https://birdclown.kr" },
                 { "type": "ReadMore", "url": "https://www.notion.so/BirdClown-230f7b0856be80758f22e501fc583986?source=copy_link" }
             ]
         }   

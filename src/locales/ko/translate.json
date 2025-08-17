@@ -28,12 +28,12 @@
             "position": "역할 - 프로젝트 리더, 풀스택/배포/인프라 총괄",
             "info": "문진 작성 후 위험 감지 시 전문가 상담 연동, AWS EC2+Cloudflare R2 기반 인프라 설계",
             "gifs": [
-                "/img/main.jpg",
-                "/img/daily_matching.gif",
-                "/img/expert_matching.gif",
-                "/img/manager_group.gif",
-                "/img/admin_notice.gif",
-                "/img/album.gif"
+                "/img/charti/main.jpg",
+                "/img/charti/daily_matching.gif",
+                "/img/charti/expert_matching.gif",
+                "/img/charti/manager_group.gif",
+                "/img/charti/admin_notice.gif",
+                "/img/charti/album.gif"
             ],
             "skills": [
                 "HTML", "CSS", "JS",
@@ -49,7 +49,7 @@
         { 
             "title": "Portfolio Site", 
             "desc": "개인 포트폴리오 웹사이트 제작", 
-            "duration": "2025-07",
+            "duration": "2025-07 (5일)",
             "logo": "/",
             "position": "개인 프로젝트",
             "info": "React 기반 반응형 포트폴리오 웹사이트 제작",
@@ -66,12 +66,17 @@
         },{
             "title": "BirdClown", 
             "desc": "회사 소개 및 홍보 사이트", 
-            "duration": "준비중",
+            "duration": "2025-08 (10일)",
             "logo": "/BirdClown_logo.png",
-            "position": "역할 - 조정중",
+            "position": "역할 - 프론트엔드, 배포",
             "info": "클라이언트의 요청에 따라 다음 두 가지에 집중, 회사/서비스 소개 + 진행했던 이벤트 사진 갤러리",
             "gifs": [
-                "/BirdClown_logo.png"
+                "/img/birdclown/main.png",
+                "/img/birdclown/about_card.png",
+                "/img/birdclown/services.png",
+                "/img/birdclown/admin_gallery.png",
+                "/img/birdclown/album_update.png",
+                "/img/birdclown/admin_detail.png"
             ],
             "skills": [
                 "HTML", "CSS", "JS", "React",
@@ -80,7 +85,7 @@
             ],
             "links": [
                 { "type": "Github", "url": "https://github.com/seonoh-k/BirdClown" },
-                { "type": "Demo", "url": "" },
+                { "type": "Website", "url": "https://birdclown.kr" },
                 { "type": "ReadMore", "url": "https://www.notion.so/BirdClown-230f7b0856be80758f22e501fc583986?source=copy_link" }
             ]
         }   

@@ -23,17 +23,17 @@
         { 
             "title": "Charti", 
             "desc": "子供のヘルスケアサービス", 
-            "duration": "2022年05月 ~ 2025年07月",
+            "duration": "2022年05月 ~ 07月 (約1ヶ月)",
             "logo": "/Charti_logo.png",
             "position": "役割 - プロジェクトリーダー, フルスタック/インフラ設計、本番リリース担当",
-            "info": "問診（アンケート）入力後、リスク検知時に専門家相談へ連携。AWS EC2とCloudflare R2を活用したインフラ設計。",
+            "info": "問診(アンケート)入力後、リスク検知時に専門家相談へ連携。AWS EC2とCloudflare R2を活用したインフラ設計。",
             "gifs": [
-                "/img/main.jpg",
-                "/img/daily_matching.gif",
-                "/img/expert_matching.gif",
-                "/img/manager_group.gif",
-                "/img/admin_notice.gif",
-                "/img/album.gif"
+                "/img/charti/main.jpg",
+                "/img/charti/daily_matching.gif",
+                "/img/charti/expert_matching.gif",
+                "/img/charti/manager_group.gif",
+                "/img/charti/admin_notice.gif",
+                "/img/charti/album.gif"
             ],
             "skills": [
                 "HTML", "CSS", "JS",
@@ -49,7 +49,7 @@
         { 
             "title": "Portfolio Site", 
             "desc": "個人ポートフォリオWebサイト制作", 
-            "duration": "2025-07",
+            "duration": "2025年07月 (5日間）",
             "logo": "/",
             "position": "単独プロジェクト",
             "info": "ReactベースのレスポンシブなポートフォリオWebサイト制作",
@@ -66,12 +66,17 @@
         },{
             "title": "BirdClown", 
             "desc": "企業紹介・プロモーションサイト", 
-            "duration": "準備中",
+            "duration": "2025年08月 (10日間)", 
             "logo": "/BirdClown_logo.png",
-            "position": "役割 - 調整中",
+            "position": "役割 - プロント、本番リリース担当",
             "info": "クライアントの要望に応じて、会社・サービス紹介と過去イベント写真ギャラリーの2点に特化。",
             "gifs": [
-                "/BirdClown_logo.png"
+                "/img/birdclown/main.png",
+                "/img/birdclown/about_card.png",
+                "/img/birdclown/services.png",
+                "/img/birdclown/admin_gallery.png",
+                "/img/birdclown/album_update.png",
+                "/img/birdclown/admin_detail.png"            
             ],
             "skills": [
                 "HTML", "CSS", "JS", "React",
@@ -80,7 +85,7 @@
             ],
             "links": [
                 { "type": "Github", "url": "https://github.com/seonoh-k/BirdClown" },
-                { "type": "Demo", "url": "" },
+                { "type": "Website", "url": "https://birdclown.kr" },
                 { "type": "ReadMore", "url": "https://www.notion.so/BirdClown-230f7b0856be80758f22e501fc583986?source=copy_link" }
             ]
         }   

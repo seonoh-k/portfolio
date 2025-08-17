@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { useSwipeable } from 'react-swipeable';
@@ -6,28 +6,70 @@ import { useTranslation } from "react-i18next";
 
 function Gifs({ project }) {
     const [ gifIdx, setGifIdx ] = useState(0);
+    const [ direction, setDirection ] = useState(0);
+    const [ isAnimating, setIsAnimating ] = useState(false);
+    const timeoutRef = useRef(null);
+
+    const updateIdx = (newDir) => {
+        if(isAnimating) return;
+        
+        setDirection(newDir);
+        setGifIdx((prevIdx) => (
+            (prevIdx + newDir + project.gifs.length) % project.gifs.length
+        ));
+        setIsAnimating(true);
+    };
 
     const swipeHandler = useSwipeable({
-        onSwipedLeft: () => 
-            setGifIdx( gifIdx === project.gifs.length - 1 ? 0 : gifIdx + 1),
-        onSwipedRight: () =>
-            setGifIdx( gifIdx === 0 ? project.gifs.length - 1 : gifIdx - 1),
+        onSwipedLeft: () => updateIdx(1),
+        onSwipedRight: () => updateIdx(-1),
         preventDefaultTouchmoveEvent: true,
         trackMouse: true
     })
 
+    useEffect (() => {
+        timeoutRef.current = setInterval(() => {
+            updateIdx(1);
+        }, 5000);
+
+        return () => clearInterval(timeoutRef.current);
+    }, [project.gifs.length])
+
+    const handleAnimation = () => {
+        setIsAnimating(false);
+    }
+
     return (
         <>
         <div {...swipeHandler}
-            className="relative w-full flex justify-center items-center select-none"
+            className="relative w-full flex justify-center select-none"
             style={{ touchAction: "pan-y" }}
         >
-            <img 
-                src={project.gifs[gifIdx]}
-                className="w-full h-full object-contain rounded-lg"
-                alt="demo"
-                draggable="false"
-            />
+            <AnimatePresence initial={false} custom={direction}>
+                <motion.img 
+                    src={project.gifs[gifIdx]}
+                    className="w-full h-full object-contain rounded-lg"
+                    alt="demo"
+                    draggable="false"
+                    custom={direction}
+                    initial={{ opacity: 0, x: direction > 0 ? 400 : -400 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: direction > 0 ? -400 : 400 }}
+                    transition={{ 
+                        x: { type:"spring", stiffness: 60, damping: 12 },
+                        opacity: { duration: 0.7 }
+                    }}
+                    onAnimationComplete={handleAnimation}
+                />
+            </AnimatePresence>
+            <button onClick={() => updateIdx(-1)}
+                className="absolute top-1/2 left-0 -translate-y-1/2 p-1 hover:bg-gray-500 rounded-lg text-gray-300 text-xl md:text-2xl hover:text-gray-700">
+                <FaAngleLeft />
+            </button>
+            <button onClick={() => updateIdx(1)}
+                className="absolute top-1/2 right-0 -translate-y-1/2 p-1 hover:bg-gray-500 rounded-lg text-gray-300 text-xl md:text-2xl hover:text-gray-700">
+                <FaAngleRight />
+            </button>
             <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
                 {project.gifs.map((_, i) => (
                     <span 
@@ -63,7 +105,7 @@ export default function Projects() {
                 <h1 className="text-3xl md:text-5xl opacity-70 md:text-left md:mb-12">Projects</h1>
                 <div className="md:hidden flex justify-center items-center gap-1 py-2">
                     <button onClick={() => setIdx(idx === 0 ? projects.length - 1 : idx - 1)}
-                        className="p-1">
+                        className="text-xl p-1">
                         <FaAngleLeft />
                     </button>
                     <div className="flex flex-col">
@@ -112,7 +154,7 @@ export default function Projects() {
                         </AnimatePresence>
                     </div>
                     <button onClick={() => setIdx(idx === projects.length - 1 ? 0 : idx + 1)}
-                        className="p-1">
+                        className="text-xl p-1">
                         <FaAngleRight />
                     </button>
                 </div>
@@ -125,7 +167,7 @@ export default function Projects() {
                                     <div className="flex gap-1">
                                         <h2 className="text-4xl font-semibold pt-2">{p.title}</h2>
                                         <img src={p.logo} 
-                                            className={`w-[120px] ml-2 object-cover
+                                            className={`w-[120px] ml-2 object-contain
                                             ${!p.logo || p.logo === '/' ? 'hidden' : ''}`}/>
                                     </div>
                                     <p className="text-2xl">{p.desc}</p>
