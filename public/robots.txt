@@ -1,0 +1,4 @@
+User-agent: *
+Allow:/
+
+Sitemap: https://www.ksn-portfolio.com/sitemap.xml
