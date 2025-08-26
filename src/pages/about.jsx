@@ -43,36 +43,34 @@ export default function About() {
                             <span key={txt} className="text-md md:text-xl">{txt}</span>
                         ))}
                     </div>
-                    <div className="flex flex-col items-center text-lg">
-                        <div className="flex items-center gap-1">
-                            <span className="font-semibold md:text-xl">Frontend</span>
+                    <div className="flex flex-col items-center">
+                        <span className="text-lg md:text-xl">Frontend</span>
+                        <div className="flex items-center gap-1 text-md md:text-lg mb-2">
                             {front.map((s, i) => (
-                                <div key={i} className="flex items-center gap-1 md:text-xl">
+                                <div key={i} className="flex items-center gap-1">
                                     {s.icon} {s.text}
                                 </div>
                             ))}
                         </div>
-                        <div className="flex items-center gap-1">
-                            <span className="font-semibold md:text-xl">Backtend</span>
+                        <span className="text-lg md:text-xl">Backtend</span>
+                        <div className="flex items-center gap-1 text-md md:text-lg mb-2">
                             {back.map((b, i) => (
-                                <div key={i} className="flex items-center gap-1 md:text-xl">
+                                <div key={i} className="flex items-center gap-1">
                                     {b.icon} {b.text}
                                 </div>
                             ))}
                         </div>
-                        <div className="flex items-center gap-1">
-                            <span className="font-semibold md:text-xl">Infra</span>
+                        <span className="text-lg md:text-xl">Infra</span>
+                        <div className="flex items-center gap-1 text-md md:text-lg mb-2">
                             {infra.map((i, idx) => (
-                                <div key={idx} className="flex items-center gap-1 md:text-xl">
+                                <div key={idx} className="flex items-center gap-1">
                                     {i.icon} {i.text}
                                 </div>
                             ))}
                         </div>
-                        <div className="flex items-center gap-1">
-                            <span className="font-semibold md:text-xl">Language</span>
-                            <div className="flex items-center gap-1 md:text-xl">
-                                Japanese - JPT score: 895, conversational
-                            </div>
+                        <span className="text-lg md:text-xl">Language</span>
+                        <div className="flex items-center text-md md:text-lg">
+                            Japanese - JPT score: 895, conversational
                         </div>
                     </div>
                     <div className="flex flex-col text-white text-md md:text-xl justify-center items-center">

@@ -28,7 +28,7 @@ export default function Home() {
                             delay: 0.8 * idx,
                             ease: "easeOut"
                         }}
-                        className="text-xl md:text-5xl font-bold"
+                        className="text-xl md:text-5xl"
                     >
                         {txt}
                     </motion.h1>
@@ -63,19 +63,19 @@ export default function Home() {
                 <p className="text-lg md:text-2xl mb-4">Language</p>
                 <div className="flex gap-4">
                     <button 
-                        className="text-sm md:text-xl hover:opacity-90"
+                        className="text-sm md:text-xl border-b-2 border-transparent hover:border-white transition-colors duration-300"
                         onClick={() => i18n.changeLanguage('en')}
                     >
                         English
                     </button>
                     <button 
-                        className="text-sm md:text-xl hover:opacity-90"
+                        className="text-sm md:text-xl border-b-2 border-transparent hover:border-white transition-colors duration-300"
                         onClick={() => i18n.changeLanguage('ko')}
                     >
                         한국어
                     </button>
                     <button 
-                        className="text-sm md:text-xl hover:opacity-90"
+                        className="text-sm md:text-xl border-b-2 border-transparent hover:border-white transition-colors duration-300"
                         onClick={() => i18n.changeLanguage('jp')}
                     >
                         日本語

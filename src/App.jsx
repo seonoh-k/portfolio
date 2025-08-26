@@ -13,7 +13,7 @@ function AnimateRoutes() {
     <>
     <div className='min-h-screen flex flex-col'>
       <Header />
-      <main className='flex-1 flex flex-col justify-center items-center bg-gradient-to-br from-gray-600 to-gray-800'>
+      <main className='flex-1 flex flex-col font-sacheon justify-center items-center bg-gradient-to-br from-gray-600 to-gray-800'>
         <AnimatePresence mode='wait'>
           <Routes location={location} key={location.pathname}>
             <Route path='' element={<Home />} />

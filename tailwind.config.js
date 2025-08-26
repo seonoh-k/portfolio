@@ -10,6 +10,9 @@ export default {
         pretendard: ["Pretendard", "sans-serif"],
         dohyeon: ["Do Hyeon", "sans-serif"],
         bitcount: ["Bitcount Grid Double", "system-ui"],
+        sacheon: ['SacheonHangGong-Regular', 'sans-serif'],
+        cafe: ['Cafe24PROUP', 'sans-serif'],
+        rock: ['SangSangRock', 'sans-serif'],
       }
     },
   },
